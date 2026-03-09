@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Umbrel-like Portal v8.3</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <div id="sceneBackdrop" class="scene-backdrop"></div>
+  <div id="app" class="app-shell">
+    <header class="top-shell panel">
+      <div class="hero-copy">
+        <div class="badge" id="portalBadgeText"></div>
+        <h1 id="portalTitle"></h1>
+        <p id="portalSubtitle" class="muted"></p>
+      </div>
+      <div class="header-stack">
+        <div class="header-group" id="headerGroupTop">
+          <button class="btn icon-only" id="toggleWidgetsBtn" title="Виджеты">▦</button>
+          <button class="btn icon-only" id="settingsBtn" title="Настройки">⚙</button>
+          <div id="userArea"></div>
+        </div>
+        <div class="header-group" id="headerGroupMiddle">
+          <button class="btn icon-only" id="importBtn" title="Импорт">↓</button>
+          <button class="btn icon-only" id="exportBtn" title="Экспорт">↑</button>
+          <button class="btn" id="discoveryBtn">Автопоиск</button>
+        </div>
+        <div class="header-group admin-only" id="headerGroupBottom">
+          <button class="btn primary grow" id="addServerBtn">+ Сервер</button>
+          <button class="btn primary grow" id="addServiceBtn">+ Сервис</button>
+        </div>
+      </div>
+    </header>
+
+    <input type="file" id="importFileInput" accept="application/json" hidden />
+
+    <section class="toolbar panel">
+      <input id="searchInput" class="input" placeholder="Поиск" />
+    </section>
+
+    <section class="widgets-wrap" id="widgetsWrap">
+      <div class="widgets-grid" id="widgetsGrid"></div>
+    </section>
+
+    <main id="serversRoot" class="servers-root"></main>
+    <footer id="footerWrap" class="footer-wrap hidden"></footer>
+  </div>
+  <div id="modalRoot"></div>
+  <script src="/app.js"></script>
+</body>
+</html>

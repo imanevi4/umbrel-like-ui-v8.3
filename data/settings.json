@@ -1,0 +1,79 @@
+{
+  "locale": "ru",
+  "portalBadgeText": "IAM Umbrel-like Control Portal",
+  "portalTitle": "\u041f\u0440\u0438\u0432\u0435\u0442!",
+  "portalSubtitle": "\u0413\u0440\u0443\u043f\u043f\u044b \u0438\u0437 \u0441\u0435\u0440\u0432\u0435\u0440\u043e\u0432, \u0441\u0435\u0440\u0432\u0438\u0441\u044b \u043d\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430\u0445 \u0432\u043d\u0443\u0442\u0440\u0438 \u0433\u0440\u0443\u043f\u043f, \u043f\u043e\u043b\u044c\u0437\u043e\u0432\u0430\u0442\u0435\u043b\u0438, \u0442\u0435\u043c\u044b, docker autodiscovery \u0438 \u0431\u044b\u0441\u0442\u0440\u044b\u0439 \u043f\u043e\u0438\u0441\u043a \u0438 \u043f\u0435\u0440\u0435\u0445\u043e\u0434 \u043f\u043e \u0441\u0435\u0440\u0432\u0438\u0441\u0430\u043c.",
+  "footerText": "",
+  "densityMode": "comfortable",
+  "materialMode": "glass-dark",
+  "actionButtonsStyle": "icons-with-text",
+  "actionButtonsVisibility": "always-visible",
+  "domainChecks": [
+    {
+      "id": "dom-example",
+      "host": "example.com",
+      "port": 443
+    }
+  ],
+  "widgets": [
+    {
+      "id": "widget-ssd",
+      "type": "ssd",
+      "enabled": true,
+      "order": 1,
+      "size": "sm"
+    },
+    {
+      "id": "widget-ram",
+      "type": "ram",
+      "enabled": true,
+      "order": 2,
+      "size": "sm"
+    },
+    {
+      "id": "widget-auth-log",
+      "type": "auth-log",
+      "enabled": true,
+      "order": 3,
+      "size": "lg"
+    },
+    {
+      "id": "widget-online-users",
+      "type": "online-users",
+      "enabled": true,
+      "order": 4,
+      "size": "lg"
+    },
+    {
+      "id": "widget-domain-ssl",
+      "type": "domain-ssl",
+      "enabled": true,
+      "order": 5,
+      "size": "lg"
+    }
+  ],
+  "widgetsMode": "expanded",
+  "telegram": {
+    "enabled": false,
+    "botToken": "",
+    "chatId": "",
+    "threadId": "",
+    "scheduleEnabled": false,
+    "scheduleType": "hourly",
+    "scheduleCron": "0 * * * *",
+    "lastSummarySentAt": "",
+    "eventNotifications": {
+      "serviceDown": true,
+      "serviceRecovered": true,
+      "sslExpiring": true,
+      "sslExpired": true,
+      "authFailuresSpike": true,
+      "newLoginIp": true
+    },
+    "thresholds": {
+      "sslDaysLeft": 14,
+      "authFailuresPer10Min": 5
+    }
+  },
+  "backgroundImageUrl": ""
+}
